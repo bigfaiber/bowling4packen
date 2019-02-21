@@ -1,0 +1,29 @@
+<body class = 'fondo'>
+
+<div class = 'container mt-5 bg-info col-md-3 container-form'>
+<h2>Log in</h2>
+
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="form-group">
+      <%= f.check_box :remember_me %>
+
+    </div>
+  <% end %>
+
+  <div class="actions text-center">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+<br/>
+
+</div>
+</body>

@@ -1,0 +1,39 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+/*
+ *= require rails_bootstrap_forms
+ */
+@import 'bootstrap';
+.container-form {
+  border-radius: 10px;
+  align-items: center;
+}
+
+.fondo {
+  background: {
+     image: url("https://www.fotoswiki.org/Uploads/fotoswiki.org/ImagensGrandes/bola-de-bowling.jpg");
+     size: cover;
+     position: center;
+     attachment: fixed;
+  }
+}
+
+.game-box {
+  padding: 15px 20px;
+  text-align: left;
+  border-top: 1px solid #efefef;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  border-bottom:1px solid #efefef;
+  }

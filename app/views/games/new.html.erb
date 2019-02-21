@@ -1,0 +1,12 @@
+
+<div class = 'container col-md-4'>
+  <%= bootstrap_form_for [@user, @game] do |f| %>
+    <div class="form-group text-center">
+      <%= f.text_field :rolls, autofocus: true, required:  true, placeholder: 'Enter all your rolls without spaces', autocomplete: "name" %>
+    </div>
+
+    <div class="actions text-center">
+      <%= f.submit %>
+    </div>
+  <% end %>
+  </div>

@@ -1,0 +1,6 @@
+class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
+  protect_from_forgery with: :exception
+  include ApplicationHelper                 #llamamos los helpers para poder utilizarlos en el proyecto
+
+end
