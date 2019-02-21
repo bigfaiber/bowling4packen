@@ -2,19 +2,19 @@
 <div class = 'container mt-5'>
   <div>
   <%if current_user.id == @user.id%>
-    <%= link_to('New Game',new_user_game_path(current_user.id))%>         <%-# link_to New Game protegido, sin embargo con userpermition! esto no es necesario -%>
+    <%= link_to('New Game',new_user_game_path(current_user.id))%>         <%# link_to New Game protegido, sin embargo con userpermition! esto no es necesario %>
     <% end %>
   </div>
   <hr>
   <h3>My Games</h3>
 
 
-<% @games.each do |g|%>                                                   <%-# printing games with cute progress bar -%>
+<% @games.each do |g|%>                                                   <%# printing games with cute progress bar %>
   <div class= 'game-box col-md-3'>
   <li><%= g.id.to_s + '->'%>
   <%= "#{g.score.to_s + '/300'}"%></li>
   <div class="progress">
-        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:<%=(g.score.to_f/300)*100%>%;"> 
+        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:<%=(g.score.to_f/300)*100%>%;">
           <%=((g.score.to_f/300)*100).to_i%>%
         </div>
       </div>
